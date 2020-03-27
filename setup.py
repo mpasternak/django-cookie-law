@@ -43,15 +43,20 @@ setup(
     platforms=['OS Independent'],
     classifiers=CLASSIFIERS,
     install_requires=[
-        'Django>=1.2',
+        'Django>=1.8',
         'django-classy-tags>=0.3.0',
+        'pytest-runner>=2.11.1'
     ],
     tests_require=[
-        'selenium==3.0.1',
+        'six',
+        'pytest>=3.0.0',
+        'pytest-django>=3.1.2',
+        'pytest-selenium>=1.9.1',
+        'selenium>=3.3.1',
     ],
     packages=find_packages(),
     package_data={'cookielaw': package_data},
     include_package_data=False,
     zip_safe=False,
-    test_suite='runtests.main',
+    test_suite='tests',
 )
